@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
 	Описание файла: https://cgnjira.cognitive.ru:8444/pages/viewpage.action?pageId=30835016
 	и в задаче https://cgnjira.cognitive.ru:8443/browse/ETPZAK-420
@@ -8,14 +8,15 @@
 <Buttons>
 	<Location name="PlanningMenu">
 		
-		<Button name="Создать новый документ" displayName="Создать новый документ">
+		<Button name="Создать таблицу распределения" displayName="Создать новый документ">
 			<Action type="Register">
-				<FlowName value="Заявки участников 223ФЗ" />
+				<FlowName value="Таблица Председателей" />
 			</Action>
 			<Visibility>
 				<Rules>
 					<And>
-						<WhenHttpGetParamEquals param="searchBlock" value="Учебный раздел" />
+						<WhenHttpGetParamEquals param="searchType" value="DistributionOfManagers" />
+						<WhenHttpGetParamEquals param="searchBlock" value="Распределение зам. Пред." />
 					</And>
 				</Rules>
 			</Visibility>
